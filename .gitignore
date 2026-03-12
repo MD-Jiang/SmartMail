@@ -1,0 +1,63 @@
+# Maven
+/target/
+
+# IDE
+/.idea/
+/*.iml
+/.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Runtime
+/data/
+/audio/
+/logs/
+
+# Environment variables
+.env
+
+# IDE files
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+Thumbs.db
+
+# Build files
+build/
+out/
+
+# Maven
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# Dependency directories
+lib/
+lib-*
+
+# Java
+*.class
+
+# Generated files
+generated-sources/
+generated-test-sources/
+
+# Testing
+coverage/
+
+# Logs
+logs/
+*.log
+
+# Temporary files
+tmp/
+temp/

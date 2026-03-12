@@ -1,0 +1,41 @@
+spring:
+  datasource:
+    url: jdbc:h2:file:./data/smartmail
+    username: sa
+    password: password
+    driver-class-name: org.h2.Driver
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+  mail:
+    host: smtp.163.com
+    port: 465
+    username: ${mail.username}
+    password: ${mail.password}
+    protocol: smtp
+    properties:
+      mail.smtp.auth: true
+      mail.smtp.ssl.enable: true
+
+smartmail:
+  schedule:
+    morning: 0 30 8 * * MON-FRI
+    noon: 0 0 12 * * MON-FRI
+  ai:
+    api-key: ${ai.api-key}
+    endpoint: https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions
+    model: deepseek-r1
+  voice:
+    rate: 150
+    pitch: 1.0
+    volume: 0.8
+  cache:
+    email-ttl: 600
+    analysis-ttl: 1800
+  storage:
+    audio-path: ./audio
+    log-path: ./logs
